@@ -48,22 +48,25 @@ export default defineComponent({
       <div class={styles.tabs}>
         <n-tabs ref="tabsInstRef" type="bar" animated default-value="table">
           <n-tab-pane name="table" tab={this.t('metadata.table_info')}>
-            <Table />
+            <Table/>
           </n-tab-pane>
           <n-tab-pane name="option" tab={this.t('metadata.option_info')}>
-            <Options />
+            <Options/>
           </n-tab-pane>
           <n-tab-pane name="schema" tab={this.t('metadata.schema_info')}>
-            <Schema />
+            <Schema/>
           </n-tab-pane>
           <n-tab-pane name="snapshot" tab={this.t('metadata.snapshot_file')}>
-            <SnapShot />
+            <SnapShot/>
           </n-tab-pane>
           <n-tab-pane name="manifest" tab={this.t('metadata.manifests_file')}>
-            <Manifest />
+            <Manifest/>
+          </n-tab-pane>
+          <n-tab-pane name="branch" tab={this.t('metadata.branch')}>
+            <Manifest/>
           </n-tab-pane>
           <n-tab-pane name="datafile" tab={this.t('metadata.data_file')}>
-            <DataFile />
+            <DataFile/>
           </n-tab-pane>
         </n-tabs>
       </div>

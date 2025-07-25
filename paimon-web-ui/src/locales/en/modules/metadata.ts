@@ -21,6 +21,7 @@ export default {
   schema_info: 'Schema',
   snapshot_file: 'Snapshot File',
   manifests_file: 'Manifest File',
+  branch: 'Branch',
   data_file: 'Data File',
 
   create_catalog: 'Create Catalog',

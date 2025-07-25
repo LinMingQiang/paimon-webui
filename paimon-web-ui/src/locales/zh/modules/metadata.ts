@@ -21,6 +21,7 @@ export default {
   schema_info: 'Schema 信息',
   snapshot_file: 'Snapshot 文件',
   manifests_file: 'Manifest 文件',
+  branch: 'Branch 分支',
   data_file: '数据文件',
 
   create_catalog: '创建 Catalog',
