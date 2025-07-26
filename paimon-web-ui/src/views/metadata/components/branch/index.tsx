@@ -32,6 +32,10 @@ export default defineComponent({
       {
         title: 'Branch Name',
         key: 'branchName'
+      },
+      {
+        title: 'Create Time',
+        key: 'createTime'
       }
     ]
 

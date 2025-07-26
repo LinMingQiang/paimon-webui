@@ -66,8 +66,23 @@ public class MetadataServiceImpl implements MetadataService {
 
     @Override
     public List<BranchVO> getBranch(MetadataDTO dto) {
+        initEnvironment(dto, MetadataConstant.BRANCHES);
+
         List<BranchVO> branches = new LinkedList<>();
-        branches.add(new BranchVO("hello_branch"));
+
+        try {
+            reader.forEachRemaining(internalRow -> {
+                LocalDateTime createTime = getSafeLocalDateTime(internalRow, 3);
+
+                BranchVO b = BranchVO.builder().branchName(getSafeString(internalRow, 0))
+                        .createTime(createTime == null ? "" : createTime.toString())
+                        .build();
+                branches.add(b);
+            });
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         return branches;
     }
 

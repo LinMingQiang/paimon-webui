@@ -17,4 +17,5 @@ under the License. */
 
 export interface Branch {
   branchName: string
+  createTime: string
 }

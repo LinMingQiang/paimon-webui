@@ -24,6 +24,8 @@ public class MetadataConstant {
     public static final String SCHEMAS = "schemas";
     public static final String OPTIONS = "options";
     public static final String MANIFESTS = "manifests";
+    public static final String BRANCHES = "branches";
+
     public static final String FILES = "files";
     public static final String CONSUMER = "consumers";
     public static final String TAGS = "tags";

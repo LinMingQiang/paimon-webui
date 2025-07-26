@@ -36,4 +36,5 @@ import java.util.List;
 public class BranchVO {
 
     private String branchName;
+    private String createTime;
 }
