@@ -19,6 +19,7 @@
 package org.apache.paimon.web.server.service;
 
 import org.apache.paimon.web.server.data.dto.MetadataDTO;
+import org.apache.paimon.web.server.data.vo.BranchVO;
 import org.apache.paimon.web.server.data.vo.DataFileVO;
 import org.apache.paimon.web.server.data.vo.ManifestsVO;
 import org.apache.paimon.web.server.data.vo.OptionVO;
@@ -69,4 +70,14 @@ public interface MetadataService {
      * @return a list of table option objects
      */
     List<OptionVO> getOption(MetadataDTO dto);
+
+    /**
+     * Retrieves a list of Metadata table option.
+     *
+     * @param dto query metadata info
+     * @return a list of table option objects
+     */
+    List<BranchVO> getBranch(MetadataDTO dto);
+
+
 }

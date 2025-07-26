@@ -33,6 +33,7 @@ import type {
   TableOption,
   TableParams,
   TableQuery,
+  Branch,
 } from './types'
 import httpRequest from '@/api/request'
 import type { RequestOptions, ResponseOptions } from '@/api/types'
@@ -232,6 +233,16 @@ export function getDataFile() {
 export function getSnapshot() {
   return httpRequest.createHooks!<Snapshot[], TableParams>({
     url: '/metadata/query/snapshot',
+    method: 'post',
+  })
+}
+
+/**
+ * # Get branch
+ */
+export function getBranch() {
+  return httpRequest.createHooks!<Branch[], TableParams>({
+    url: '/metadata/query/branch',
     method: 'post',
   })
 }

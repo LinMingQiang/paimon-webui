@@ -28,6 +28,7 @@ import org.apache.paimon.web.server.data.dto.MetadataDTO;
 import org.apache.paimon.web.server.data.model.CatalogInfo;
 import org.apache.paimon.web.server.data.model.MetadataFieldsModel;
 import org.apache.paimon.web.server.data.model.MetadataOptionModel;
+import org.apache.paimon.web.server.data.vo.BranchVO;
 import org.apache.paimon.web.server.data.vo.DataFileVO;
 import org.apache.paimon.web.server.data.vo.ManifestsVO;
 import org.apache.paimon.web.server.data.vo.OptionVO;
@@ -45,6 +46,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -61,6 +63,13 @@ public class MetadataServiceImpl implements MetadataService {
     }
 
     private RecordReader<InternalRow> reader;
+
+    @Override
+    public List<BranchVO> getBranch(MetadataDTO dto) {
+        List<BranchVO> branches = new LinkedList<>();
+        branches.add(new BranchVO("hello_branch"));
+        return branches;
+    }
 
     @Override
     public List<SchemaVO> getSchema(MetadataDTO dto) {

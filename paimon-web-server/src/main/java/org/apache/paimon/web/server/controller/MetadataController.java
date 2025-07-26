@@ -20,6 +20,7 @@ package org.apache.paimon.web.server.controller;
 
 import org.apache.paimon.web.server.data.dto.MetadataDTO;
 import org.apache.paimon.web.server.data.result.R;
+import org.apache.paimon.web.server.data.vo.BranchVO;
 import org.apache.paimon.web.server.data.vo.DataFileVO;
 import org.apache.paimon.web.server.data.vo.ManifestsVO;
 import org.apache.paimon.web.server.data.vo.OptionVO;
@@ -76,5 +77,11 @@ public class MetadataController {
     @PostMapping("/options")
     public R<List<OptionVO>> getOptionInfo(@RequestBody MetadataDTO dto) {
         return R.succeed(metadataService.getOption(dto));
+    }
+
+    @SaCheckPermission("metadata:branch:list")
+    @PostMapping("/branch")
+    public R<List<BranchVO>> getBranchInfo(@RequestBody MetadataDTO dto) {
+        return R.succeed(metadataService.getBranch(dto));
     }
 }

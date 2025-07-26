@@ -23,6 +23,8 @@ import Schema from '../schema'
 import SnapShot from '../snapshot'
 import Manifest from '../manifest'
 import DataFile from '../datafile'
+import Branch from '../branch'
+
 
 import styles from './index.module.scss'
 import { useConfigStore } from '@/store/config'
@@ -63,7 +65,7 @@ export default defineComponent({
             <Manifest/>
           </n-tab-pane>
           <n-tab-pane name="branch" tab={this.t('metadata.branch')}>
-            <Manifest/>
+            <Branch/>
           </n-tab-pane>
           <n-tab-pane name="datafile" tab={this.t('metadata.data_file')}>
             <DataFile/>
