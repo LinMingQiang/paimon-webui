@@ -23,4 +23,3 @@ export * from './snapshot'
 export * from './manifest'
 export * from './datafile'
 export * from './branch'
-

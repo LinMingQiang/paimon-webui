@@ -197,7 +197,7 @@ export default defineComponent({
                         </n-radio-group>
                       </n-form-item>
                       {(this.formValue.options.fileSystemType === 's3'
-                      || this.formValue.options.fileSystemType === 'oss') && (
+                        || this.formValue.options.fileSystemType === 'oss') && (
                         <>
                           <n-form-item label={this.t('metadata.catalog_endpoint')}>
                             <n-input v-model:value={this.formValue.options.endpoint} />

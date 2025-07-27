@@ -17,7 +17,7 @@ under the License. */
 
 import type { DataTableColumns } from 'naive-ui'
 
-import { type Branch, getBranch} from '@/api/models/catalog'
+import { type Branch, getBranch } from '@/api/models/catalog'
 import { useCatalogStore } from '@/store/catalog'
 
 export default defineComponent({
@@ -31,12 +31,12 @@ export default defineComponent({
     const columns: DataTableColumns<Branch> = [
       {
         title: 'Branch Name',
-        key: 'branchName'
+        key: 'branchName',
       },
       {
         title: 'Create Time',
-        key: 'createTime'
-      }
+        key: 'createTime',
+      },
     ]
 
     const onFetchData = async () => {

@@ -46,7 +46,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -71,14 +70,17 @@ public class MetadataServiceImpl implements MetadataService {
         List<BranchVO> branches = new LinkedList<>();
 
         try {
-            reader.forEachRemaining(internalRow -> {
-                LocalDateTime createTime = getSafeLocalDateTime(internalRow, 3);
+            reader.forEachRemaining(
+                    internalRow -> {
+                        LocalDateTime createTime = getSafeLocalDateTime(internalRow, 3);
 
-                BranchVO b = BranchVO.builder().branchName(getSafeString(internalRow, 0))
-                        .createTime(createTime == null ? "" : createTime.toString())
-                        .build();
-                branches.add(b);
-            });
+                        BranchVO b =
+                                BranchVO.builder()
+                                        .branchName(getSafeString(internalRow, 0))
+                                        .createTime(createTime == null ? "" : createTime.toString())
+                                        .build();
+                        branches.add(b);
+                    });
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

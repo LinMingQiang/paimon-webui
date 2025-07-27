@@ -22,11 +22,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.paimon.web.server.data.model.MetadataFieldsModel;
-import org.apache.paimon.web.server.data.model.MetadataOptionModel;
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 /** VO of metadata schema. */
 @Data

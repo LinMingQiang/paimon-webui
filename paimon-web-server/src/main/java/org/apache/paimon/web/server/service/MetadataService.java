@@ -78,6 +78,4 @@ public interface MetadataService {
      * @return a list of table option objects
      */
     List<BranchVO> getBranch(MetadataDTO dto);
-
-
 }

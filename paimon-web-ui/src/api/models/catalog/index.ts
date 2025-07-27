@@ -17,6 +17,7 @@ under the License. */
 
 import type {
   AlterTableDTO,
+  Branch,
   Catalog,
   CatalogDTO,
   ColumnParams,
@@ -33,7 +34,6 @@ import type {
   TableOption,
   TableParams,
   TableQuery,
-  Branch,
 } from './types'
 import httpRequest from '@/api/request'
 import type { RequestOptions, ResponseOptions } from '@/api/types'
