@@ -24,6 +24,15 @@ export default antfu({
     quotes: 'single',
   },
 
+  rules: {
+    "unused-imports/no-unused-vars": "off",
+    "eslint-comments/no-unlimited-disable": "off",
+    "ts/no-unused-expressions":"off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-console": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  },
+
   typescript: true,
   vue: true,
 
